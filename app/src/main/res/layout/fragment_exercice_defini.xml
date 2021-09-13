@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idFrameLayoutExo"
+    android:tag="tagFragmentExo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExerciceDefini">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/idTextTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TitreExercice"
+            android:textSize="30dp"
+            android:gravity="center"/>
+
+        <VideoView
+            android:id="@+id/idVideoDef"
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/idImageFrag"
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:text="Type de categorie"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/idSpinnerType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="Type"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idTimerFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:scrollbars="none"
+            android:text="00:00:00:000"
+            android:textAlignment="center"
+            android:textColor="@color/bleu"
+            android:textSize="48dp"/>
+
+    </LinearLayout>
+
+</FrameLayout>

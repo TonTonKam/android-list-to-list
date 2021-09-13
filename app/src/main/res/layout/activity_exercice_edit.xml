@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/vertAndroid"
+    android:orientation="vertical"
+    tools:context=".ExerciceEdit">
+
+    <VideoView
+        android:id="@+id/idVideo"
+        android:layout_width="362dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="15dp"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="210dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:foregroundGravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/idNomExercice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Nom de l'exercice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idVideo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="categorie"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/idSwitchType"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/idSwitchType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="152dp"
+        android:gravity="center"
+        android:text="Switch"
+        app:layout_constraintBottom_toTopOf="@+id/idSwitchSerie"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/idSwitchSerie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="44dp"
+        android:text="Switch"
+        app:layout_constraintBottom_toTopOf="@+id/idChronoSerie"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/idSerieTemps"
+        android:layout_width="223dp"
+        android:layout_height="25dp"
+        android:gravity="center"
+        android:text="Serie : on, Temps : off"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idSwitchType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.407"
+        app:layout_constraintStart_toEndOf="@+id/idSwitchType" />
+
+    <ImageSwitcher
+        android:id="@+id/idImageSwitch"
+        android:layout_width="115dp"
+        android:layout_height="80dp"
+        android:foregroundGravity="center|center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/idEditSerie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idSerieTemps"
+        app:layout_constraintVertical_bias="0.444"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <EditText
+        android:id="@+id/idEditSerie"
+        android:layout_width="206dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Nombre de series"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idSwitchSerie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.29"
+        app:layout_constraintStart_toEndOf="@+id/idSwitchSerie" />
+
+    <Chronometer
+        android:id="@+id/idChronoSerie"
+        android:layout_width="253dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/idChronoTotal"
+        app:layout_constraintEnd_toEndOf="@+id/idChronoTotal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <Chronometer
+        android:id="@+id/idChronoTotal"
+        android:layout_width="253dp"
+        android:layout_height="38dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/idValider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/idValider"
+        android:layout_width="66dp"
+        android:layout_height="29dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Valider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Temps d'1 serie"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idChronoSerie"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="Temps Total Estimer"
+        app:layout_constraintBaseline_toBaselineOf="@+id/idChronoTotal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="222dp"
+        android:layout_height="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/idSerieTemps"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/idNomExercice"
+        app:layout_constraintVertical_bias="0.685" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
